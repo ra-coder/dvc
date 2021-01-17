@@ -8,7 +8,7 @@ from dvc.exceptions import DvcException
 logger = logging.getLogger(__name__)
 
 
-class CmdDiscUsage(CmdBase):
+class CmdDiskUsage(CmdBase):
     def run(self):
         try:
             logger.info("\n".join(["du stab works"]))
@@ -21,11 +21,9 @@ class CmdDiscUsage(CmdBase):
 
 
 def add_parser(subparsers, parent_parser):
-    DU_HELP = "Rename or move a DVC controlled data file or a directory."
+    DU_HELP = "TODO"
     DU_DESCRIPTION = (
-        "Rename or move a DVC controlled data file or a directory.\n"
-        "It renames and modifies the corresponding DVC-file to reflect the"
-        " changes."
+        "TODO"
     )
 
     du_parser = subparsers.add_parser(
@@ -41,4 +39,4 @@ def add_parser(subparsers, parent_parser):
     # du_parser.add_argument(
     #     "dst", help="Destination path.",
     # ).complete = completion.FILE
-    du_parser.set_defaults(func=CmdDiscUsage)
+    du_parser.set_defaults(func=CmdDiskUsage)
