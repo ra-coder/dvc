@@ -137,7 +137,6 @@ class TestDU(TestDvc):
         self.assertIsInstance(args.func(args), CmdDiscUsage)
 
 
-
 class TestGCMultipleDvcRepos(TestDvc):
     def test(self):
         args = parse_args(["gc", "-p", "/tmp/asdf", "/tmp/xyz"])
