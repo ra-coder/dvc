@@ -6,7 +6,7 @@ from dvc.command.base import CmdBase
 from dvc.command.checkout import CmdCheckout
 from dvc.command.config import CmdConfig
 from dvc.command.data_sync import CmdDataPull, CmdDataPush
-from dvc.command.du import CmdDiscUsage
+from dvc.command.du import CmdDiskUsage
 from dvc.command.gc import CmdGC
 from dvc.command.init import CmdInit
 from dvc.command.remove import CmdRemove
@@ -134,7 +134,7 @@ class TestGC(TestDvc):
 class TestDU(TestDvc):
     def test(self):
         args = parse_args(["du"])
-        self.assertIsInstance(args.func(args), CmdDiscUsage)
+        self.assertIsInstance(args.func(args), CmdDiskUsage)
 
 
 class TestGCMultipleDvcRepos(TestDvc):
